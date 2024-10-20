@@ -1,0 +1,39 @@
+/* CONTACT SECTION */
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  padding: 2rem;
+  animation: zoom-in 1.2s ease both;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  animation: fade-up 1s ease both;
+}
+
+.contact-info-container p {
+  font-size: 1.25rem;
+}
+
+.contact-icon {
+  cursor: default;
+  width: 2rem;
+  height: 2rem;
+  animation: spin 2s linear infinite;
+}
+
+/* FOOTER */
+footer {
+  height: 20vh;
+  text-align: center;
+  animation: fade-up 1s ease both;
+}
+
+footer p {
+  text-align: center;
+}
