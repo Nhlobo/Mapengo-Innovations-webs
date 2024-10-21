@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Mapengo Innovations</title>
     <link rel="stylesheet" href="styles.css">
-    
     <style>
         /* Base Styles */
         body {
@@ -123,5 +122,14 @@
         </div>
         <p class="footer-copy">© 2024 Mapengo Innovations</p>
     </footer>
+    <script>
+        // Get the toggle switch
+        const toggleSwitch = document.getElementById('theme-toggle');
+
+        // Add event listener for toggle switch
+        toggleSwitch.addEventListener('change', function() {
+            document.body.classList.toggle('dark-mode', this.checked);
+        });
+    </script>
 </body>
-    </html>
+</html>
