@@ -581,9 +581,7 @@
         width: 100%; /* Full width on smaller screens */
 
 
-
-
-    <!-- ================= FOOTER ================= -->
+<!-- ================= FOOTER ================= -->
 <footer>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
@@ -660,6 +658,51 @@
             color: #f5f5f5; /* Link color in dark mode */
         }
 
+        /* Custom Facebook Button */
+        .facebook-btn {
+            display: inline-block;
+            position: relative;
+        }
+
+        .facebook-btn button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #316FF6; /* Facebook blue */
+            color: white;
+            font-size: 1.2em;
+            border: none;
+            transition: transform 0.3s ease;
+        }
+
+        .facebook-btn button:hover {
+            transform: translateY(-10px); /* Hover effect */
+            border-radius: 50%;
+        }
+
+        .facebook-btn svg {
+            width: 1.5em;
+            height: 1.5em;
+            fill: white;
+        }
+
+        .facebook-btn span {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .facebook-btn:hover span {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-10px);
+            color: #212121;
+        }
+
         /* Responsive Styling */
         @media (max-width: 600px) {
             .footer-social a {
@@ -677,9 +720,15 @@
             <a href="privacy.html">Privacy Policy</a>
         </div>
         <div class="footer-social">
-            <a href="https://www.facebook.com/profile.php?id=61566799933804&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-facebook"></i>
-            </a>
+            <!-- Facebook Icon Button -->
+            <div class="facebook-btn">
+                <button href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+                        <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/>
+                    </svg>
+                    <span>Facebook</span>
+                </button>
+            </div>
             <a href="https://x.com/M_Innovations2?t=WDHsq9xng4W_39RSFNryLA&s=09" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-x-twitter"></i>
             </a>
