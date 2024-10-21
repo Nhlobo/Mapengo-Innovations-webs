@@ -493,27 +493,51 @@
     gap: 10px; /* Space between checkbox and label */
 }
 
+/* Updated button styling */
 .contact-form .form-submit-btn {
+    height: 50px; /* Set the height */
+    width: 200px; /* Set the width */
+    position: relative; /* Position relative for pseudo-element */
+    background-color: transparent; /* Transparent background */
+    cursor: pointer; /* Change cursor to pointer */
+    border: 2px solid #ced4da; /* Match border color with the text box */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 30px; /* Rounded corners */
+    color: #333; /* Text color */
+    transition: all 0.5s ease-in-out; /* Transition effect */
+    font-weight: 800; /* Bold text */
+    letter-spacing: 4px; /* Spacing between letters */
     display: flex;
     align-items: center;
     justify-content: center;
     align-self: flex-start;
-    font-family: inherit;
-    color: #717171;
-    font-weight: 600;
-    width: 40%;
-    background: #f1f1f1; /* Light gray background for button */
-    border: 1px solid #ced4da; /* Subtle border for button */
-    padding: 12px 16px;
-    font-size: inherit;
-    gap: 8px;
-    margin-top: 8px;
-    cursor: pointer;
-    border-radius: 6px;
+    margin-top: 8px; /* Maintain margin for spacing */
+}
+
+.contact-form .form-submit-btn::after {
+    content: ""; /* Pseudo-element for background effect */
+    position: absolute; /* Position it absolutely */
+    left: 0; /* Align to left */
+    top: 0; /* Align to top */
+    transition: all 0.5s ease-in-out; /* Transition for the background */
+    background-color: #333; /* Background color on hover */
+    border-radius: 30px; /* Match border radius */
+    visibility: hidden; /* Hide by default */
+    height: 100%; /* Full height */
+    width: 100%; /* Full width */
+    z-index: -1; /* Place behind the text */
+    transform: scale(0); /* Start scaled down */
 }
 
 .contact-form .form-submit-btn:hover {
-    background-color: #e2e2e2; /* Slightly darker on hover */
+    box-shadow: 1px 1px 200px #252525; /* Add shadow effect on hover */
+    color: #fff; /* Change text color on hover */
+    border: none; /* Remove border on hover */
+}
+
+.contact-form .form-submit-btn:hover::after {
+    visibility: visible; /* Show on hover */
+    transform: scale(1); /* Scale to full size */
 }
 
 /* Error Message */
@@ -543,6 +567,9 @@
         padding: 16px; /* Reduce padding */
     }
 
+    .contact-form .form-submit-btn {
+        width: 100%; /* Full width on smaller screens */
+    }
     
     <!-- ================= FOOTER ================= -->
 <footer>
