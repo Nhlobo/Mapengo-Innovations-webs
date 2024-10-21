@@ -672,19 +672,21 @@
             border-radius: 50%;
             background-color: #316FF6; /* Facebook blue */
             color: white;
-            font-size: 1.2em;
+            font-size: 1em; /* Reduced size */
             border: none;
             transition: transform 0.3s ease;
+            width: 40px; /* Icon container size */
+            height: 40px; /* Icon container size */
         }
 
         .facebook-btn button:hover {
-            transform: translateY(-10px); /* Hover effect */
+            transform: translateY(-5px); /* Slight hover effect */
             border-radius: 50%;
         }
 
         .facebook-btn svg {
-            width: 1.5em;
-            height: 1.5em;
+            width: 20px; /* Icon size */
+            height: 20px; /* Icon size */
             fill: white;
         }
 
@@ -699,7 +701,7 @@
 
         .facebook-btn:hover span {
             opacity: 1;
-            transform: translateX(-50%) translateY(-10px);
+            transform: translateX(-50%) translateY(-5px);
             color: #212121;
         }
 
@@ -747,3 +749,5 @@
 <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Ensure FontAwesome is included for icons -->
 </body>
 </html>
+    
+    
