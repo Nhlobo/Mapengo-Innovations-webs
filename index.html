@@ -585,50 +585,42 @@
 <footer>
     <style>
         footer {
-            background-color: #ffffff; /* White background to match the contact form */
-            padding: 20px 0; /* Padding for the footer */
-            color: #212121; /* Text color to match contact form */
+            background-color: #ffffff; /* White background */
+            padding: 40px 0; /* Increased padding for more space */
+            color: #212121; /* Text color */
             text-align: center; /* Centered text */
             border-top: 2px solid #c3e6cb; /* Subtle top border */
+            font-family: Arial, sans-serif; /* Clean font */
         }
 
         .footer-container {
-            max-width: 400px; /* Match the contact form width */
+            max-width: 600px; /* Increased max width for better layout */
             margin: 0 auto; /* Center the footer content */
-            padding: 0 20px; /* Padding for responsive design */
+            padding: 0 20px; /* Responsive padding */
         }
 
-        .footer-links {
-            margin-bottom: 10px; /* Margin for spacing */
+        .footer-links, .footer-social {
+            margin-bottom: 20px; /* More space between sections */
             display: flex;
-            justify-content: center; /* Center links */
+            justify-content: center; /* Center links and icons */
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
         }
 
-        .footer-links a {
+        .footer-links a, .footer-social a {
             color: #212121; /* Text color */
             text-decoration: none; /* Remove underline */
-            margin: 0 10px; /* Spacing between links */
-            font-weight: 600; /* Match font weight */
+            margin: 0 15px; /* Spacing between links/icons */
+            font-weight: 600; /* Bold text */
+            transition: color 0.3s; /* Smooth transition for hover */
         }
 
-        .footer-links a:hover {
+        .footer-links a:hover, .footer-social a:hover {
             color: #e81cff; /* Change color on hover */
         }
 
-        .footer-social {
-            margin-bottom: 10px; /* Margin for spacing */
-            display: flex;
-            justify-content: center; /* Center icons horizontally */
-            align-items: center; /* Align icons vertically */
-        }
-
-        .footer-social i {
-            margin-right: 8px; /* Space between icon and text */
-        }
-
         .footer-contact {
-            margin-bottom: 10px; /* Margin for spacing */
-            font-size: 14px; /* Match contact form font size */
+            margin-bottom: 20px; /* Space above contact info */
+            font-size: 14px; /* Font size */
         }
 
         .footer-copy {
@@ -638,7 +630,7 @@
 
         /* Dark Mode Styles */
         body.dark-mode footer {
-            background-color: #313131; /* Dark background for footer */
+            background-color: #313131; /* Dark background */
             color: white; /* Text color */
         }
 
@@ -673,7 +665,7 @@
         <p class="footer-copy">© 2024 Mapengo Innovations. All rights reserved.</p>
     </div>
 </footer>
-    
+
 <!-- ================= SCRIPT ================= -->
 <script src="assets/js/script.js"></script>
 </body>
