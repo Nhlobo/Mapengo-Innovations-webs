@@ -580,7 +580,10 @@
     .contact-form .form-submit-btn {
         width: 100%; /* Full width on smaller screens */
 
-      <!-- ================= FOOTER ================= -->
+
+
+
+    <!-- ================= FOOTER ================= -->
 <footer>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
@@ -600,49 +603,50 @@
             padding: 0 20px; /* Responsive padding */
         }
 
-        .footer-links, .footer-social {
-            margin-bottom: 25px; /* More space between sections */
+        .footer-links {
             display: flex;
-            justify-content: center; /* Center links and icons */
-            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            justify-content: center; /* Center links */
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+            margin-bottom: 20px; /* Space between links and icons */
         }
 
-        .footer-links a, .footer-social a {
+        .footer-links a {
             color: #212121; /* Link color */
             text-decoration: none; /* Remove underline */
-            margin: 0 20px; /* Spacing between links/icons */
+            margin: 0 20px; /* Spacing between links */
             font-weight: 600; /* Bold text */
             transition: color 0.3s ease; /* Smooth transition for hover */
         }
 
-        .footer-links a:hover, .footer-social a:hover {
+        .footer-links a:hover {
             color: #e81cff; /* Highlight color on hover */
         }
 
+        .footer-social {
+            display: flex;
+            justify-content: center; /* Center icons */
+            margin-bottom: 25px; /* Space between icons and contact info */
+        }
+
         .footer-social a {
-            font-size: 20px; /* Icon size */
+            font-size: 24px; /* Icon size */
+            margin: 0 15px; /* Spacing between icons */
+            transition: transform 0.3s ease; /* Smooth scaling effect */
+        }
+
+        .footer-social a:hover {
+            transform: scale(1.2); /* Slightly enlarge icon on hover */
+            color: #e81cff; /* Highlight icon on hover */
         }
 
         .footer-contact {
-            margin-bottom: 20px; /* Space above contact info */
             font-size: 14px; /* Font size */
+            margin-bottom: 20px; /* Space above contact info */
         }
 
         .footer-copy {
             font-size: 12px; /* Smaller text for copyright */
             margin-top: 15px; /* Space above copyright text */
-        }
-
-        /* Icon Styling */
-        .footer-social i {
-            font-size: 24px; /* Larger icons for emphasis */
-            margin: 0 10px; /* Spacing between icons */
-            transition: transform 0.3s ease; /* Smooth scaling effect */
-        }
-
-        .footer-social i:hover {
-            transform: scale(1.2); /* Slightly enlarge icon on hover */
-            color: #e81cff; /* Highlight icon on hover */
         }
 
         /* Dark Mode Styles */
@@ -655,6 +659,16 @@
         body.dark-mode .footer-social a {
             color: #f5f5f5; /* Link color in dark mode */
         }
+
+        /* Responsive Styling */
+        @media (max-width: 600px) {
+            .footer-social a {
+                margin: 0 10px; /* Reduce spacing between icons for small screens */
+            }
+            .footer-links a {
+                margin: 0 10px; /* Reduce spacing for links */
+            }
+        }
     </style>
 
     <div class="footer-container">
@@ -664,13 +678,10 @@
         </div>
         <div class="footer-social">
             <a href="https://www.facebook.com/profile.php?id=61566799933804&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-facebook"></i>
             </a>
             <a href="https://x.com/M_Innovations2?t=WDHsq9xng4W_39RSFNryLA&s=09" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://twitter.com/YOUR_TWITTER_LINK" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-twitter"></i>
+                <i class="fab fa-x-twitter"></i>
             </a>
             <a href="YOUR_INSTAGRAM_LINK" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-instagram"></i>
@@ -686,5 +697,4 @@
 <!-- ================= SCRIPT ================= -->
 <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Ensure FontAwesome is included for icons -->
 </body>
-</html>  
-    
+</html>
