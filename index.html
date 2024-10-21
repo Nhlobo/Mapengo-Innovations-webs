@@ -432,7 +432,7 @@
         }
     </script>
 <style>
-.contact-form {
+    .contact-form {
     max-width: 400px; /* Set a max-width for larger screens */
     width: 90%; /* Allow more width on smaller screens */
     margin: 20px auto; /* Center the form with some margin */
@@ -466,7 +466,8 @@
 .contact-form .form-group input,
 .contact-form .form-group textarea {
     width: 100%;
-    padding: 10px; /* Adjusted padding */
+    max-width: 300px; /* Reduce maximum width for smaller input fields */
+    padding: 8px; /* Adjusted padding for a smaller look */
     border-radius: 8px;
     color: black; /* Change text color to black */
     font-family: inherit;
@@ -540,7 +541,8 @@
 @media (max-width: 768px) {
     .contact-form {
         padding: 16px; /* Reduce padding */
- }
+    }
+
     
     <!-- ================= FOOTER ================= -->
 <footer>
