@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapengo Innovations</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>   
+    <style>
+        /* Toggle Switch Styles */
+        .label {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            color: #394a56;
+        }
+
+        .toggle {
+            isolation: isolate;
+            position: relative;
+            height: 30px;
+            width: 60px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: -8px -4px 8px 0px #ffffff,
+                        8px 4px 12px 0px #d1d9e6,
+                        4px 4px 4px 0px #d1d9e6 inset,
+                        -4px -4px 4px 0px #ffffff inset;
+        }
+
+        .toggle-state {
+            display: none;
+        }
+
+        .indicator {
+            height: 100%;
+            width: 200%;
+            background: #e8e8e8; /* Default background color */
+            border-radius: 15px;
+            transform: translate3d(-75%, 0, 0);
+            transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35),
+                        background 0.4s; /* Added transition for background */
+            box-shadow: -8px -4px 8px 0px #ffffff,
+                        8px 4px 12px 0px #d1d9e6;
+        }
+
+        .toggle-state:checked ~ .indicator {
+            transform: translate3d(25%, 0, 0);
+            background: #212121; /* Background color when checked */
+        }
+    </style>
+</head>
 <body>
 
   <!-- ================= HEADER ================= -->
@@ -16,7 +59,7 @@
         <div class="logo">
             <img src="assets/logo.png" alt="Mapengo Innovations Logo">
         </div>
-            <div class="burger" id="burger">
+        <div class="burger" id="burger">
             <span class="burger-line"></span>
             <span class="burger-line"></span>
             <span class="burger-line"></span>
@@ -31,10 +74,6 @@
                 <li class="menu-item"><a href="#contact" class="menu-link">Contact us</a></li>
             </ul>
         </div>
-        <button class="switch" id="switch">
-            <i class="switch-light bx bx-sun"></i>
-            <i class="switch-dark bx bx-moon"></i>
-        </button>
 
         <!-- Toggle Switch -->
         <label class="label">
@@ -55,14 +94,17 @@
                 <h1 class="heading-xl">Mapengo Innovations</h1>
                 <p class="paragraph">Innovative tech solutions to drive your business forward.</p>
                 <button class="btn btn-darken btn-inline">
-                    Discover Our <i class="bx bx-right-arrow-alt"></i> <a href="#services" class="menu-link">Services</a>
+                    Discover Our<i class="bx bx-right-arrow-alt"></i><a href="#services" class="menu-link">Services</a>
                 </button>
             </div>
         </div>
     </section>
 </main>
- 
-   <!-- ================= ABOUT US ================= -->
+
+</body>
+</html>
+
+<!-- ================= ABOUT US ================= -->
 <section id="about" class="container">
     <h2 class="section-title">About Us</h2>
     <p>Mapengo Innovations is a forward-thinking software company based in Johannesburg. Our mission is to deliver innovative technology solutions that empower businesses to thrive in a competitive landscape. We believe in the power of technology to transform the way companies operate and engage with their customers.</p>
