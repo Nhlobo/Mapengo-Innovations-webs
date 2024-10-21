@@ -431,6 +431,153 @@
         }
     </script>
 <style>
+
+.contact-form {
+    max-width: 400px; /* Set a max-width for larger screens */
+    width: 100%; /* Allow full width on smaller screens */
+    margin: 0 auto; /* Center the form */
+    background-color: white; /* Set background to white */
+    border: 2px solid #c3e6cb; /* Add a subtle border */
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: black; /* Change text color to black for contrast */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.contact-form button:active {
+    scale: 0.95;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contact-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #717171;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.contact-form .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: black; /* Change input text color to black */
+    font-family: inherit;
+    background-color: #f8f9fa; /* Light background for inputs */
+    border: 1px solid #ced4da; /* Subtle border for inputs */
+}
+
+.contact-form .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    color: black; /* Change textarea text color to black */
+    height: 96px;
+    border: 1px solid #ced4da; /* Subtle border for textarea */
+    background-color: #f8f9fa; /* Light background for textarea */
+}
+
+.contact-form .form-group input::placeholder {
+    opacity: 0.5;
+}
+
+.contact-form .form-group input:focus {
+    outline: none;
+    border-color: #80bdff; /* Change focus border color */
+}
+
+.contact-form .form-group textarea:focus {
+    outline: none;
+    border-color: #80bdff; /* Change focus border color */
+}
+
+.contact-form .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #717171;
+    font-weight: 600;
+    width: 40%;
+    background: #f1f1f1; /* Light gray background for button */
+    border: 1px solid #ced4da; /* Subtle border for button */
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.contact-form .form-submit-btn:hover {
+    background-color: #e2e2e2; /* Slightly darker on hover */
+}
+
+/* Error Message */
+.error-message {
+    color: #dc3545;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #f5c6cb;
+    margin-top: 10px;
+}
+
+/* Loader */
+#loader {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#loader img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Form Checkboxes */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px; /* Add spacing between checkbox and label */
+}
+
+.checkbox-group input {
+    margin-right: 5px; /* Reduce margin for better spacing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-form {
+        width: 90%; /* Allow more width on smaller screens */
+        padding: 16px; /* Reduce padding */
+    }
+
+    .form-submit-btn {
+        width: 100%; /* Make the button full width */
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+
+
+    
 .contact-form {
     width: 400px;
     background: linear-gradient(#212121, #212121) padding-box,
@@ -520,53 +667,6 @@
     border-radius: 6px;
 }
 
-.contact-form .form-submit-btn:hover {
-    background-color: #fff;
-    border-color: #fff;
-}
-
-/* Error Message */
-.error-message {
-    color: #dc3545;
-    background-color: #f8d7da;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #f5c6cb;
-    margin-top: 10px;
-}
-
-/* Loader */
-#loader {
-    text-align: center;
-    margin-top: 20px;
-}
-
-#loader img {
-    width: 50px;
-    height: 50px;
-}
-
-/* Form Checkboxes */
-.checkbox-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.checkbox-group input {
-    margin-right: 10px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .contact-form {
-        width: 100%;
-    }
-    .form-group {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-               
     <!-- ================= FOOTER ================= -->
 <footer>
     <div class="footer-container">
