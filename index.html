@@ -583,171 +583,120 @@
 
 <!-- ================= FOOTER ================= -->
 <footer>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    <section id="lab_social_icon_footer">
+<!-- Include Font Awesome Stylesheet in Header -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+  #lab_social_icon_footer {
+    padding: 40px 0;
+    background-color: #dedede;
+    text-align: center;
+  }
 
-        footer {
-            background-color: #f8f9fa; /* Soft background */
-            padding: 50px 0; /* Generous padding for space */
-            color: #212121; /* Text color */
-            text-align: center; /* Centered text */
-            border-top: 2px solid #c3e6cb; /* Light top border */
-            font-family: 'Poppins', sans-serif; /* Modern, professional font */
-        }
+  #lab_social_icon_footer a {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+  }
 
-        .footer-container {
-            max-width: 800px; /* Increased max width for better layout */
-            margin: 0 auto; /* Center the footer content */
-            padding: 0 20px; /* Responsive padding */
-        }
+  #lab_social_icon_footer .social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 
-        .footer-links {
-            display: flex;
-            justify-content: center; /* Center links */
-            flex-wrap: wrap; /* Allow wrapping on small screens */
-            margin-bottom: 20px; /* Space between links and icons */
-        }
+  #lab_social_icon_footer .social {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+  }
 
-        .footer-links a {
-            color: #212121; /* Link color */
-            text-decoration: none; /* Remove underline */
-            margin: 0 20px; /* Spacing between links */
-            font-weight: 600; /* Bold text */
-            transition: color 0.3s ease; /* Smooth transition for hover */
-        }
+  .footer-links {
+    margin-bottom: 20px;
+    text-align: center;
+  }
 
-        .footer-links a:hover {
-            color: #e81cff; /* Highlight color on hover */
-        }
+  .footer-links a {
+    margin: 0 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+  }
 
-        .footer-social {
-            display: flex;
-            justify-content: center; /* Center icons */
-            margin-bottom: 25px; /* Space between icons and contact info */
-        }
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
 
-        .footer-social a {
-            font-size: 24px; /* Icon size */
-            margin: 0 15px; /* Spacing between icons */
-            transition: transform 0.3s ease; /* Smooth scaling effect */
-        }
+  .footer-copy {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+  }
 
-        .footer-social a:hover {
-            transform: scale(1.2); /* Slightly enlarge icon on hover */
-            color: #e81cff; /* Highlight icon on hover */
-        }
+  /* Make the footer responsive */
+  @media (max-width: 768px) {
+    #lab_social_icon_footer a {
+      margin: 0 5px;
+    }
 
-        .footer-contact {
-            font-size: 14px; /* Font size */
-            margin-bottom: 20px; /* Space above contact info */
-        }
+    .footer-links a {
+      font-size: 14px;
+    }
 
-        .footer-copy {
-            font-size: 12px; /* Smaller text for copyright */
-            margin-top: 15px; /* Space above copyright text */
-        }
+    #lab_social_icon_footer .social {
+      -webkit-transform: scale(0.9);
+      -moz-transform: scale(0.9);
+      -o-transform: scale(0.9);
+      transform: scale(0.9);
+    }
 
-        /* Dark Mode Styles */
-        body.dark-mode footer {
-            background-color: #1e1e1e; /* Dark background */
-            color: #f5f5f5; /* Light text color */
-        }
+    .footer-copy {
+      font-size: 12px;
+    }
+  }
 
-        body.dark-mode .footer-links a,
-        body.dark-mode .footer-social a {
-            color: #f5f5f5; /* Link color in dark mode */
-        }
+  @media (max-width: 480px) {
+    #lab_social_icon_footer a {
+      margin: 0 3px;
+    }
 
-        /* Custom Facebook Button */
-        .facebook-btn {
-            display: inline-block;
-            position: relative;
-        }
+    .footer-links a {
+      font-size: 12px;
+    }
 
-        .facebook-btn button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-            border-radius: 50%;
-            background-color: #316FF6; /* Facebook blue */
-            color: white;
-            font-size: 1em; /* Reduced size */
-            border: none;
-            transition: transform 0.3s ease;
-            width: 40px; /* Icon container size */
-            height: 40px; /* Icon container size */
-        }
+    #lab_social_icon_footer .social {
+      -webkit-transform: scale(0.7);
+      -moz-transform: scale(0.7);
+      -o-transform: scale(0.7);
+      transform: scale(0.7);
+    }
 
-        .facebook-btn button:hover {
-            transform: translateY(-5px); /* Slight hover effect */
-            border-radius: 50%;
-        }
+    .footer-copy {
+      font-size: 10px;
+    }
+  }
+</style>
 
-        .facebook-btn svg {
-            width: 20px; /* Icon size */
-            height: 20px; /* Icon size */
-            fill: white;
-        }
-
-        .facebook-btn span {
-            position: absolute;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.3s, transform 0.3s;
-        }
-
-        .facebook-btn:hover span {
-            opacity: 1;
-            transform: translateX(-50%) translateY(-5px);
-            color: #212121;
-        }
-
-        /* Responsive Styling */
-        @media (max-width: 600px) {
-            .footer-social a {
-                margin: 0 10px; /* Reduce spacing between icons for small screens */
-            }
-            .footer-links a {
-                margin: 0 10px; /* Reduce spacing for links */
-            }
-        }
-    </style>
-
-    <div class="footer-container">
-        <div class="footer-links">
-            <a href="terms.html">Terms of Service</a>
-            <a href="privacy.html">Privacy Policy</a>
-        </div>
-        <div class="footer-social">
-            <!-- Facebook Icon Button -->
-            <div class="facebook-btn">
-                <button href="/">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
-                        <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/>
-                    </svg>
-                    <span>Facebook</span>
-                </button>
-            </div>
-            <a href="https://x.com/M_Innovations2?t=WDHsq9xng4W_39RSFNryLA&s=09" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-x-twitter"></i>
-            </a>
-            <a href="YOUR_INSTAGRAM_LINK" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-        <div class="footer-contact">
-            <p>Contact: mapengoinnovations@gmail.com | Address: 2791 Cristian Drive, Johannesburg, South Africa</p>
-        </div>
-        <p class="footer-copy">© 2024 Mapengo Innovations. All rights reserved.</p>
+<div class="container">
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
     </div>
-</footer>
-
-<!-- ================= SCRIPT ================= -->
-<script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Ensure FontAwesome is included for icons -->
-</body>
-</html>
-    
-    
+  </div>
+  <div class="text-center center-block">
+    <a href="https://www.facebook.com/nhlobomathebula"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+    <a href="https://twitter.com/nhlobomathebula"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+    <a href="mailto:nhlobo365@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+  </div>
+  <p class="footer-copy">© 2024 Mapengo Innovations. All rights reserved.</p>
+</div>
+</section>
+<html>
