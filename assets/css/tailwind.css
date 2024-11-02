@@ -142,7 +142,7 @@ body.dark-mode {
     box-sizing: border-box;
 }
 
-body {
+.body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4; /* Light mode background */
     color: #212121; /* Light mode text color */
